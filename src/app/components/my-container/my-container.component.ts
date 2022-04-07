@@ -11,7 +11,7 @@ export class MyContainerComponent implements OnInit {
   constructor() {}
 
   @Input() data: any;
-  // WARNING: the client is responsible for keeping this string sanatized from injection attacks!
+  // WARNING: the client of this component is responsible for keeping this string sanatized from injection attacks!
   @Input() preSanatizedTemplate: { html: string };
 
   innerHtml: string;
