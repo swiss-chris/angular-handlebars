@@ -16,7 +16,7 @@ export class MyContainerComponent implements OnInit {
   innerHtml: string;
 
   ngOnInit() {
-    const templateFunction = Handlebars.compile(this.preSanitizedTemplate);
-    this.innerHtml = templateFunction(this.data);
+    const render = Handlebars.compile(this.preSanitizedTemplate);
+    this.innerHtml = render(this.data);
   }
 }
