@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   data = { person: { name: 'Chris', occupation: 'developer' } };
-  preSanatizedTemplate = `
+  preSanitizedTemplate = `
       <style type='text/css'>
         body {
           font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +19,7 @@ export class AppComponent {
       </style>
 
       <div>
-        <a href='https://www.medium.com'>This is a working link</a>
+        <a href='https://www.medium.com' target='_blank'>This is a working link</a>
         <div class='green'>
           This is dynamic green text using a style tag.
         </div>
