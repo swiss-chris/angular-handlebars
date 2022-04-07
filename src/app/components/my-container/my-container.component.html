@@ -1,4 +1,4 @@
-<div [innerHTML]="innerHtml"></div>
+<div [innerHTML]="innerHtml | safeHtml"></div>
 <style>
   .blue {
     color: blue
