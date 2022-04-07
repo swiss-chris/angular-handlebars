@@ -1,3 +1,4 @@
+// inspired by https://stackoverflow.com/a/45141487/349169
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
