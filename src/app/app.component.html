@@ -1,7 +1,15 @@
-<app-my-container [data]="{ name: 'Chris', occupation: 'developer' }">
+<app-my-container
+  [data]="{ name: 'Chris', occupation: 'developer' }"
+  [template]="{
+    html: '<div>
+    	Your name is {{data.name}}. You are a {{data.occupation}}.
+    </div>'
+  }"
+>
   <script id="handlebars-demo" type="text/x-handlebars-template">
     <div>
     	Your name is {{data.name}}. You are a {{data.occupation}}.
     </div>
   </script>
+  <div>This is passed via ng-content</div>
 </app-my-container>
