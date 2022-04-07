@@ -1,10 +1,10 @@
 <hello name="{{ name }}"></hello>
 <p>Start editing to see some magic happen :)</p>
 
-<app-my-container>
+<app-my-container [data]="{ name: 'Chris', occupation: 'developer' }">
   <script id="handlebars-demo" type="text/x-handlebars-template">
     <div>
-    	My name is {{name}}. I am a {{occupation}}.
+    	My name is {{data.name}}. I am a {{data.occupation}}.
     </div>
   </script>
 </app-my-container>
