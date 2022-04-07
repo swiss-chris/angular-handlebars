@@ -12,10 +12,13 @@ export class MyContainerComponent implements OnInit {
   @Input() data: { person: { name: string; occupation: string } };
   @Input() template: { html: string };
 
+  innerHtml: string;
+
   ngOnInit() {
     console.log(this.template.html);
     const templateScript = Handlebars.compile(this.template.html);
     const html = templateScript(this.data);
     console.log(html);
+    this.innerHtml = html;
   }
 }
