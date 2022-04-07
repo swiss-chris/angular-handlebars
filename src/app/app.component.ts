@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -17,7 +17,7 @@ export class AppComponent {
           color: green;
         }
       </style>
-      
+
       <div>
         <a href='https://www.medium.com'>This is a working link</a>
         <div class='green'>
