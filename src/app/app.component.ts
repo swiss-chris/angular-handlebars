@@ -8,13 +8,18 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   data = { person: { name: 'Chris', occupation: 'developer' } };
   preSanatizedTemplate = `
+      <style type='text/css'>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .green { 
+          color: green;
+        }
+      </style>
+      
       <div>
         <a href='https://www.medium.com'>This is a working link</a>
-        <style type='text/css'>
-          .green { 
-            color: green;
-          } 
-        </style>
         <div class='green'>
           This is dynamic green text using a style tag.
         </div>
