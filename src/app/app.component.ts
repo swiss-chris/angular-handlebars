@@ -7,7 +7,7 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   data: any = { person: { name: 'Chris', occupation: 'developer' } };
-  preSanatizedTemplate = `
+  preSanatizedTemplate: string = `
       <div>
         <a href='https://www.medium.com'>This is a working link</a>
         <style type='text/css'>
