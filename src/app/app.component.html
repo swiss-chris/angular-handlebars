@@ -2,16 +2,17 @@
   [data]="{ person: { name: 'Chris', occupation: 'developer' } }"
   [template]="{
     html: '<div>
-    	My name is {{person.name}}. I am a {{person.occupation}}.
+      <a href=\'https:\/\/www.medium.com\'>This is a working link</a>
+      <div>
+        This is text rendered from a handlebars template: My name is {{person.name}}. I am a {{person.occupation}}.
+      </div>
+      <style type=\'text/css\'>
+       .red { color: red; } 
+      </style>
+      <div class=\'red\'>
+        This should be dynamic red text but the style tag got sanatized away.
+      </div>
     </div>'
   }"
 >
 </app-my-container>
-
-
-
-
-
-
-
-

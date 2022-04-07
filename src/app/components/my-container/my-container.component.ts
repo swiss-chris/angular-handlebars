@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import * as Handlebars from 'handlebars';
 
 @Component({
@@ -17,5 +18,6 @@ export class MyContainerComponent implements OnInit {
   ngOnInit() {
     const templateScript = Handlebars.compile(this.template.html);
     this.innerHtml = templateScript(this.data);
+    console.log(this.innerHtml);
   }
 }
