@@ -6,7 +6,7 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  data = { person: { name: 'Chris', occupation: 'developer' } };
+  data: any = { person: { name: 'Chris', occupation: 'developer' } };
   preSanatizedTemplate = `
       <div>
         <a href='https://www.medium.com'>This is a working link</a>
