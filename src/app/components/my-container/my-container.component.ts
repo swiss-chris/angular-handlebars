@@ -14,9 +14,8 @@ export class MyContainerComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.template.html);
-    var templateScript = Handlebars.compile(this.template.html);
-    var html = templateScript(this.data);
-
+    const templateScript = Handlebars.compile(this.template.html);
+    const html = templateScript(this.data);
     console.log(html);
   }
 }
