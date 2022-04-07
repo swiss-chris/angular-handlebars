@@ -12,13 +12,13 @@ export class MyContainerComponent implements OnInit {
 
   @Input() data: any;
   // WARNING: the client of this component is responsible for keeping this string sanatized from injection attacks!
-  @Input() preSanatizedTemplate: { html: string };
+  @Input() preSanatizedTemplate: string;
 
   innerHtml: string;
 
   ngOnInit() {
     const preSanatizedTemplateScript = Handlebars.compile(
-      this.preSanatizedTemplate.html
+      this.preSanatizedTemplate
     );
     this.innerHtml = preSanatizedTemplateScript(this.data);
     console.log(this.innerHtml);

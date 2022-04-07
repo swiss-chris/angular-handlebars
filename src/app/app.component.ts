@@ -7,8 +7,7 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   data = { person: { name: 'Chris', occupation: 'developer' } };
-  preSanatizedTemplate = {
-    html: `
+  preSanatizedTemplate = `
       <div>
         <a href='https://www.medium.com'>This is a working link</a>
         <style type='text/css'>
@@ -26,6 +25,5 @@ export class AppComponent {
           Text rendered from Handlebars template: My name is {{person.name}}. I am a {{person.occupation}}.
         </div>
       </div>
-    `,
-  };
+    `;
 }
