@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as Handlebars from 'handlebars';
 
 @Component({
   selector: 'app-my-container',
@@ -8,10 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MyContainerComponent implements OnInit {
   constructor() {}
 
-  @Input() data: { name: string; occupation: string };
+  @Input() data: { person: { name: string; occupation: string } };
   @Input() template: { html: string };
 
   ngOnInit() {
     console.log(this.template.html);
+    var templateScript = Handlebars.compile(this.template.html);
+    var html = templateScript(this.data);
+
+    console.log(html);
   }
 }
